@@ -3,3 +3,8 @@
 
 # Cria o banco na primeira execução
 #criar_banco("data/condominio.db")
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
