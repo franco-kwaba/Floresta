@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser query pragmas" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="4276"/><column_width id="4" width="0"/></tab_structure><tab_browse><table title="." custom_title="0" dock_id="3" table="0,0:"/><dock_state state="000000ff00000000fd00000001000000020000032700000226fc0100000003fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000000003270000000000000000fb000000160064006f0063006b00420072006f00770073006500330100000000000003270000011e00ffffff0000025e0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">-- Tabela: risco_seguranca_opcoes
+INSERT INTO risco_seguranca_opcoes (valor, descricao) VALUES
+(1, 'Sem risco à integridade física, apenas desconforto'),
+(2, 'Pequeno desconforto, incômodo ou susto'),
+(3, 'Algum risco moderado de acidente ou situação perigosa'),
+(4, 'Potencial lesão leve/moderada para moradores'),
+(5, 'Possibilidade clara de acidente grave ou ameaça à vida');
+
+-- Tabela: risco_integridade_opcoes
+INSERT INTO risco_integridade_opcoes (valor, descricao) VALUES
+(1, 'Sem risco físico ou emocional'),
+(2, 'Situação de incômodo ou stress leve'),
+(3, 'Potencial para sofrimento emocional ou lesão leve'),
+(4, 'Ocorrência frequente de conflitos, medo, ansiedade ou pequenos acidentes'),
+(5, 'Risco alto de impacto psicológico duradouro ou ferimento físico');
+
+-- Tabela: risco_bens_opcoes
+INSERT INTO risco_bens_opcoes (valor, descricao) VALUES
+(1, 'Danos financeiros mínimos (menos de R$100)'),
+(2, 'Danos pequenos: objeto/móvel, pintura, lâmpada'),
+(3, 'Danos em áreas comuns/ferramentas, perdas médias'),
+(4, 'Danos significativos à estrutura, equipamentos caros'),
+(5, 'Risco de grandes prejuízos, perda de patrimônio relevante');
+
+-- Tabela: probabilidade_opcoes
+INSERT INTO probabilidade_opcoes (valor, descricao) VALUES
+(1, 'Nunca aconteceu / improvável'),
+(2, 'Raro, mas já ocorreu'),
+(3, 'Pode acontecer ocasionalmente'),
+(4, 'Ocorre com frequência moderada'),
+(5, 'Muito frequente / está acontecendo');
+
+-- Tabela: prioridades_opcoes
+INSERT INTO prioridades_opcoes (valor, descricao) VALUES
+(1, 'Pode esperar meses para ser resolvido'),
+(2, 'Resolvido em até 1 mês'),
+(3, 'Precisa ser resolvido em até 1 semana'),
+(4, 'Precisa de atenção em 72h'),
+(5, 'Emergência, necessita ação imediata (24h)');
+
+-- Tabela: custo_opcoes
+INSERT INTO custo_opcoes (valor, descricao) VALUES
+(5, 'Resolução gratuita/baixíssimo'),
+(4, 'Baixo custo (até R$1.000)'),
+(3, 'Médio (R$1.000 - R$5.000)'),
+(2, 'Alto (R$5.000 - R$20.000)'),
+(1, 'Muito alto (acima de R$20.000)');
+
+-- Tabela: percepcao_opcoes
+INSERT INTO percepcao_opcoes (valor, descricao) VALUES
+(1, 'Solicitação isolada'),
+(2, 'Solicitação recorrente de poucos moradores'),
+(3, 'Solicitação frequente/reclamação repetida de pequeno grupo'),
+(4, 'Solicitação recorrente/grupo relevante ou conselho'),
+(5, 'Solicitação endossada por grande parte do condomínio/concentração');</sql><current_tab id="0"/></tab_sql></sqlb_project>
