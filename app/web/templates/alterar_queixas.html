@@ -1,0 +1,22 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Queixas</h2>
+
+<ul>
+    {% for q in queixas %}
+        <li>
+            <strong>ID: {{ q[0] }}</strong> - {{ q[1] }}
+            <a href="/avaliar/{{ q[0] }}">Avaliar</a>
+        </li>
+    {% endfor %}
+</ul>
+
+<h3>Nova Queixa</h3>
+<form method="post">
+    <textarea name="descricao" placeholder="Descreva sua queixa" required></textarea><br>
+    <button type="submit">Cadastrar Queixa</button>
+</form>
+{% endblock %}
