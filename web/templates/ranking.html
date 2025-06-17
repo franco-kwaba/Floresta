@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Ranking de Queixas</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Posição</th>
+            <th>ID</th>
+            <th>Descrição</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+         {% for queixa in queixas %}
+            <tr>
+                <td>{{ loop.index }}</td>  {# Posição (começa em 1) #}
+                <td>{{ queixa[0] }}</td>
+                <td>{{ queixa[1] }}</td>
+                <td>{{ queixa[2] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% if not queixas %}
+    <p>Nenhuma queixa encontrada.</p>
+{% endif %}
+
+{% endblock %}

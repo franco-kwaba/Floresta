@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestão Condominial</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/conselheiros">Conselheiros</a> |
+        <a href="/queixas">Queixas</a> |
+        <a href="/ranking">Ranking</a>
+    </nav>
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

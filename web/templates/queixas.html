@@ -1,0 +1,46 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Queixas</h2>
+
+<ul>
+    {% for q in queixas %}
+        <li>
+            <strong>ID: {{ q[0] }}</strong> - {{ q[1] }}
+            <a href="/avaliar/{{ q[0] }}">Avaliar</a>
+        </li>
+    {% endfor %}
+</ul>
+
+<h3>Nova Queixa</h3>
+<form method="post">
+    <textarea name="descricao" placeholder="Descreva sua queixa" required></textarea><br>
+    
+    
+         <label>Custo:</label>
+         <select name="custo" required>
+             {% for valor, descricao in custos %}
+                 <option value="{{ valor }}"
+                   {% if avaliacao and valor == (avaliacao['custo'] if avaliacao['custo'] else avaliacao[8]) %}
+                     selected
+                   {% endif %}
+                 >{{ valor }} - {{ descricao }}</option>
+             {% endfor %}
+         </select><br>
+                 
+                 
+       <label>Percepção dos Moradores</label>
+              <select name="percepcao" required>
+                  {% for valor, descricao in percepcoes %}
+                      <option value="{{ valor }}"
+                        {% if avaliacao and valor == (avaliacao['opcoes_percepcoes'] if avaliacao['opcoes_percepcoes'] else avaliacao[9]) %}
+                          selected
+                        {% endif %}
+                      >{{ valor }} - {{ descricao }}</option>
+                  {% endfor %}
+              </select><br>
+    <button type="submit">Cadastrar Queixa</button>
+</form>
+{% endblock %}
