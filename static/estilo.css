@@ -1,3 +1,4 @@
+/* 
 body {
     font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, #e7ffe9 0%, #bce3cb 100%);
@@ -179,5 +180,207 @@ pre {
     form, table {
         max-width: 97vw;
         font-size: 1em;
+    }
+}
+
+*/
+
+-----
+
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif !important;
+    font-size: 1em; /* Tamanho base das fontes em EM */
+    background: linear-gradient(135deg, #e7ffe9 0%, #bce3cb 100%);
+    color: #264626;
+    margin: 0;
+    padding: 0 1em; /* Maior padding para melhor adaptação */
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    color: #2e7d4e;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-bottom: 0.6em;
+    text-shadow: 0 1px 1px #eaffef;
+    font-size: 1.5em; /* Tamanho relativo */
+}
+
+ul, ol {
+    padding-left: 1.5em;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    background: #eaffef;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px #dcefe133;
+    font-size: 1em; /* Mantém tamanho adaptável */
+}
+
+li {
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+    padding: 0.3em 0.7em;
+}
+
+input, select, textarea {
+    border: 1px solid #85cba1;
+    border-radius: 5px;
+    padding: 0.6em;
+    font-size: 1em; /* Mantém adaptabilidade */
+    margin-bottom: 1em;
+    background-color: #f3fef7;
+    color: #23623a;
+    transition: border 0.2s;
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 100%; /* Previne limites fixos que comprometam a responsividade */
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    border: 1.5px solid #2e8c5e;
+    outline: none;
+    background-color: #eaffef;
+}
+
+form {
+    background-color: #eaffef90;
+    padding: 1.2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #97ceaa2d;
+    margin-bottom: 2em;
+    max-width: 100%; /* Ocupa 100% em telas menores */
+    font-size: 1em; /* Adaptável para texto */
+}
+
+button, input[type="submit"] {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7em 2em;
+    font-size: 1.1em; /* Proporcional */
+    cursor: pointer;
+    box-shadow: 0 2px 5px #bce3cb60;
+    margin-top: 0.5em;
+    transition: background 0.2s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #219150;
+}
+
+table {
+    width: 100%; /* Responsividade em telas maiores */
+    border-collapse: collapse;
+    background: #f3fef7;
+    box-shadow: 0 1px 4px #bce3cb60;
+    margin-bottom: 2em;
+    font-size: 1em; /* Responsivo */
+}
+
+th, td {
+    border: 1px solid #c6e1cf;
+    padding: 0.75em;
+    text-align: left;
+}
+
+th {
+    background: #b7eccc;
+    color: #185f3a;
+    letter-spacing: 0.8px;
+    font-size: 1.1em; /* Tamanho adaptável */
+}
+
+tr:nth-child(even) {
+    background-color: #e7ffe9;
+}
+
+tr:hover {
+    background-color: #c2dfcc90;
+}
+
+a {
+    color: #27ae60;
+    text-decoration: underline;
+    transition: color 0.15s;
+    word-break: break-word; /* Previne erros no layout com links longos */
+}
+
+a:hover {
+    color: #186641;
+}
+
+hr {
+    border: none;
+    border-top: 1.5px solid #c6e1cf;
+    margin: 2em 0;
+}
+
+p {
+    margin: 1em 0 0.5em 0;
+    font-size: 1em; /* Adaptável */
+}
+
+label {
+    color: #2e7d4e;
+    font-weight: 500;
+    margin-bottom: 0.2em;
+    display: inline-block;
+}
+
+pre {
+    background: #eaffef;
+    padding: 0.8em 1em;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.95em; /* Responsivo */
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 0 0.5em; /* Ajuste do padding nas laterais */
+    }
+    table {
+        width: 100%; /* Responsividade em telas maiores */
+        border-collapse: collapse;
+        background: #f3fef7;
+        box-shadow: 0 1px 4px #bce3cb60;
+        margin-bottom: 2em;
+        font-size: 0.5em; /* Responsivo */
+    }
+
+    th, td {
+        border: 1px solid #c6e1cf;
+        padding: 0.75em;
+        text-align: left;
+    }
+
+    th {
+        background: #b7eccc;
+        color: #185f3a;
+        letter-spacing: 0.8px;
+        font-size: 1.1em; /* Tamanho adaptável */
+    }
+
+    tr:nth-child(even) {
+        background-color: #e7ffe9;
+    }
+
+    tr:hover {
+        background-color: #c2dfcc90;
+    }
+
+    form {
+        max-width: 100%; /* Garante largura completa no viewport */
+        font-size: 1em; /* Relativo */
+    }
+    h1, h2, h3, h4 {
+        font-size: 1.3em; /* Menores em telas pequenas */
+    }
+    button, input[type="submit"] {
+        padding: 0.6em 1.8em;
+        font-size: 1em;
+        width: 100%; /* Ajusta os botões para ocupar toda a largura */
     }
 }
