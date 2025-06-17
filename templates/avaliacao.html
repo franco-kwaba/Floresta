@@ -45,7 +45,7 @@
     
         <label>Risco à Bens:</label><br>
                <select name="risco_bens" required>
-                   {% for valor, descricao in opcoes_risco_integridade %}
+                   {% for valor, descricao in opcoes_risco_bens %}
                        <option value="{{ valor }}"
                          {% if avaliacao and valor == (avaliacao['risco_bens'] if avaliacao['risco_bens'] else avaliacao[5]) %}
                            selected
@@ -57,7 +57,7 @@
    
       <label>Probabilidade:</label><br>
              <select name="probabilidade" required>
-                 {% for valor, descricao in opcoes_prioridades %}
+                 {% for valor, descricao in opcoes_probabilidades %}
                      <option value="{{ valor }}"
                        {% if avaliacao and valor == (avaliacao['probabilidade'] if avaliacao['probabilidade'] else avaliacao[6]) %}
                          selected
