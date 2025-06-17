@@ -20,7 +20,7 @@
     <label>Risco à Segurança:</label>
     <input type="hidden" name="conselheiro_id" value="{{ conselheiro_id }}">
     
-    <label>Risco à Segurança:</label>
+    <label>Risco à Segurança:</label><br>
     <select name="risco_seguranca" required>
         {% for valor, descricao in opcoes_risco_seguranca %}
             <option value="{{ valor }}"
@@ -31,7 +31,7 @@
         {% endfor %}
     </select><br>
     
-    <label>Risco à Integridade:</label>
+    <label>Risco à Integridade:</label><br>
            <select name="risco_integridade" required>
                {% for valor, descricao in opcoes_risco_integridade %}
                    <option value="{{ valor }}"
@@ -42,7 +42,7 @@
                {% endfor %}
            </select><br>
     
-        <label>Risco à Bens:</label>
+        <label>Risco à Bens:</label><br>
                <select name="risco_bens" required>
                    {% for valor, descricao in opcoes_risco_integridade %}
                        <option value="{{ valor }}"
@@ -54,7 +54,7 @@
                </select><br>
         
    
-      <label>Probabilidade:</label>
+      <label>Probabilidade:</label><br>
              <select name="probabilidade" required>
                  {% for valor, descricao in opcoes_prioridades %}
                      <option value="{{ valor }}"
@@ -68,7 +68,7 @@
  
 
     
-    <label>Urgência (Prioridade):</label>
+    <label>Urgência (Prioridade):</label><br>
            <select name="urgencia" required>
                {% for valor, descricao in opcoes_prioridades %}
                    <option value="{{ valor }}"
@@ -81,7 +81,7 @@
            
     
 
-       <label>Custo:</label>
+       <label>Custo:</label><br>
         <input type="hidden" name="custo" value="{{ valores_queixa[10] }}">
            
        <select name="custoblock" disabled>
@@ -97,12 +97,12 @@
        </select><br>
                
                
-     <label>Percepção dos Moradores</label>
+     <label>Percepção dos Moradores</label><br>
      <input type="hidden" name="percepcao_moradores" value="{{ valores_queixa[11] }}">
             <select name="listablocpercp" disabled>
                 {% for valor, descricao in opcoes_percepcoes %}
                     <option value="{{ valor }}"
-                      {%        if( valor == valores_queixa[11]) %}
+                      {%        if( valor == valores_queixa[7]) %}
                           selected
                       {% endif %}
                     >{{ valor }} - {{ descricao }}</option>

@@ -5,7 +5,7 @@
 <h2>Bem-vindo! Selecione seu nome:</h2>
 
 <form action="/painel" method="get">
-    <label for="conselheiro_id">Conselheiro:</label>
+    <label for="conselheiro_id">Conselheiro:</label><br>
     <select name="conselheiro_id" id="conselheiro_id" required>
         {% for conselheiro in conselheiros %}
             <option value="{{ conselheiro[0] }}">{{ conselheiro[1] }}</option>

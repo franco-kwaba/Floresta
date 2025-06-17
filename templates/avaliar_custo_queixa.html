@@ -14,7 +14,7 @@
     
 </ul>
 
-<h3>Queixa </h3>
+<h3>Queixa {{ queixa[7] }}</h3>
 <form method="post" action="/avaliar_custo_queixa/{{ queixa_id }}">
    
     <input type="hidden" name="conselheiro_id" value="{{ conselheiro_id }}">
@@ -26,7 +26,7 @@
     </textarea><br>
     
     
-      <label>Custo:</label>
+      <label>Custo:</label><br>
       <select name="custo" required>
           {% for valor, descricao in opcoes_custos %}
               <option value="{{ valor }}"
@@ -37,11 +37,11 @@
           {% endfor %}
       </select><br>
       
-      <label>Percepções dos Moradores:</label>
+      <label>Percepções dos Moradores:</label><br>
       <select name="percepcao" required>
           {% for valor, descricao in opcoes_percepcoes %}
               <option value="{{ valor }}"
-                {% if queixa[11] and valor == (queixa[11] if queixa[11] else 0) %}
+                {% if queixa[7] and valor == (queixa[7] if queixa[7] else 0) %}
                   selected
                 {% endif %}
               >{{ valor }} - {{ descricao }}</option>

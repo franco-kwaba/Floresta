@@ -19,7 +19,7 @@
     <textarea name="descricao" placeholder="Descreva sua queixa" required></textarea><br>
     
     
-         <label>Custo:</label>
+         <label>Custo:</label><br>
          <select name="custo" required>
              {% for valor, descricao in custos %}
                  <option value="{{ valor }}"
@@ -31,7 +31,7 @@
          </select><br>
                  
                  
-       <label>Percepção dos Moradores</label>
+       <label>Percepção dos Moradores</label><br>
               <select name="percepcao" required>
                   {% for valor, descricao in percepcoes %}
                       <option value="{{ valor }}"
