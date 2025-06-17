@@ -6,14 +6,15 @@
 
 
 <h2>
-    Avaliar Queixa #{{ queixa_id }}
-    <br>
+    Avaliar Queixa #{{ queixa_id }}<br>
+    
     Conselheiro: {{ conselheiro_nome[1] }}
 </h2>
 
+
 <!--- <p>DEBUG opcoes custos: </p> -->
 <hr>
-
+<h3>Descrição: {{ valores_queixa[1] }}</h3>
 
 <hr>
 <form method="post" action="/avaliar/{{ queixa_id }}">
